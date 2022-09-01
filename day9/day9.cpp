@@ -15,10 +15,10 @@ int main()
 	cout << a.top()<<endl;
 	
 	//map容器
-	map<int,string> m1;
+	map<int,string> m1;	//创建map
 	m1.insert(pair<int,string>(1,"123"));
 	m1.insert(pair<int, string>(21, "sb"));
-	string s = m1[21];
+	string s = m1[21];	//根据键获取值
 	cout<<"map:"<<s;
 }
 

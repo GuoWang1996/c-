@@ -15,7 +15,7 @@ public:
 	}
 	Person(const char * c,int age) {
 		cout << "constructor" << endl;
-		name = c;
+		this->name = c;
 		this->age = age;
 		
 	}
