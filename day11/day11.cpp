@@ -4,6 +4,7 @@
 #include <iostream>
 #include<fstream>
 #include<string>
+#include "windows.h"
 using namespace std;
 class Person
 {
@@ -44,7 +45,16 @@ void test02()
 	file.read((char *)&p,sizeof p);
 	cout <<  " 年龄：" << p.age;
 }
+;
+int j;
 int main()
 {
-	test02();
+	//test02();
+	//int i = 11;//临时变量i值存放在寄存器eax，并没有堆中开辟内存
+	int * pi = new int[10];//通过new在堆中开辟10字节的内存
+	int * pj = &j;
+	ZeroMemory(pi, 10);
+	ZeroMemory(pj, 50);
+	delete[] pi;	//释放内存  多数值或对象＋[]
+	
 }
